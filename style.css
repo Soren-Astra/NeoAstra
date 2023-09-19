@@ -1,0 +1,208 @@
+:root {
+	--header-image: url('resources/siteheader.gif');
+	--body-bg-image: url('resources/sitebg.gif');
+	--purple-point: url('resources/purplepoint.gif');
+	--blue-point: url('resources/bluepoint.gif');
+
+	/* colors */
+	--theme-dark-bg: #023059;
+	--theme-medium-bg: #260126;
+	--theme-light-bg: #023059;
+	--theme-text-focus: #3bdbed;
+	--theme-text-default: #fcf5fc;
+	--theme-border-blue: #30F2DF;
+	--theme-border-purple: #EE05F2;
+}
+
+@font-face {
+	font-family: VCR_OSD;
+	src: url('resources/VCR_OSD_MONO_1.001.ttf');
+}
+
+body {
+	font-family: 'VCR_OSD', sans-serif;
+	margin: 0;
+	background-color: var(--theme-dark-bg);
+	color: var(--theme-text-default);
+	background-image: var(--body-bg-image);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+#container {
+	max-width: 900px;
+	/* if you change the above value, scroll to the bottom
+	and change the media query according to the comment! */
+	margin: 0 auto;
+}
+
+#container a {
+	color: var(--theme-text-focus);
+	font-weight: bold;
+}
+
+#header {
+	width: 100%;
+	background-color: var(--theme-light-bg);
+	height: 150px;
+	background-image: var(--header-image);
+	background-size: 100%;
+}
+
+
+#flex {
+	display: flex;
+}
+
+aside {
+	background-color: var(--theme-medium-bg);
+	width: 220px;
+	padding: 5px 20px;
+	font-size: smaller;
+	border: 1px solid var(--theme-border-purple);
+}
+
+aside hr {
+	color: var(--theme-border-blue);
+	margin: 20px 0;
+}
+
+
+main {
+	background-color: var(--theme-light-bg);
+	flex: 1;
+	padding: 5px 20px;
+	order: 2;
+}
+
+main hr {
+	color: var(--theme-border-blue);
+	margin: 20px 0;
+}
+
+#leftSidebar {
+	order: 1;
+}
+
+#rightSidebar {
+	order: 3;
+}
+
+footer {
+	background-color: var(--theme-medium-bg);
+	width: 100%;
+	text-align: center;
+	border: 1px solid var(--theme-border-purple);
+}
+
+h1,
+h2,
+h3 {
+	color: var(--theme-text-focus);
+}
+
+h1 {
+	font-size: 25px;
+}
+
+h2 {
+	font-size: 20px;
+}
+
+strong {
+	color: var(--theme-text-focus);
+}
+
+.box {
+	background-color: var(--theme-dark-bg);
+	border: 1px solid var(--theme-border-blue);
+	padding: 10px;
+}
+
+#topBar {
+	width: 100%;
+	height: 30px;
+	padding: 10px;
+	font-size: smaller;
+}
+
+#sidebarList li {
+	list-style-image: var(--purple-point);
+	margin: 10px 0;
+}
+
+#sidebarList .alternate {
+	list-style-image: var(--blue-point);
+}
+
+/*
+#navbar {
+	height: 40px;
+	background-color: var(--theme-dark-bg);
+	width: 100%;
+	border: 1px solid var(--theme-border-blue);
+}
+
+#navbar ul {
+	display: flex;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	justify-content: space-evenly;
+}
+
+#navbar li {
+	padding-top: 10px;
+}
+
+#navbar li a {
+	color: var(--theme-text-focus);
+	font-weight: 800;
+	text-decoration: none;
+}
+
+#navbar li a:hover {
+	color: var(--theme-text-default);
+	text-decoration: underline;
+}
+*/
+
+/* BELOW THIS POINT IS MEDIA QUERY */
+
+/* so you wanna change the width of your page? 
+by default, the container width is 900px.
+in order to keep things responsive, take your new height,
+and then subtrack it by 100. use this new number as the 
+"max-width" value below
+*/
+@media only screen and (max-width: 800px) {
+	#flex {
+		flex-wrap: wrap;
+	}
+
+	aside {
+		width: 100%;
+	}
+
+	/* the order of the items is adjusted here for responsiveness!
+	since the sidebars would be too small on a mobile device.
+	feel free to play around with the order!
+	*/
+	main {
+		order: 1;
+	}
+
+	#leftSidebar {
+		order: 2;
+	}
+
+	#rightSidebar {
+		order: 3;
+	}
+
+	#navbar ul {
+		flex-wrap: wrap;
+	}
+}
