@@ -47,7 +47,7 @@ body {
 #header {
 	width: 100%;
 	background-color: var(--theme-light-bg);
-	height: 150px;
+	height: 210px;
 	background-image: var(--header-image);
 	background-size: 100%;
 	margin-bottom: 10px;
@@ -84,6 +84,7 @@ main hr {
 
 #leftSidebar {
 	order: 1;
+	margin-right: 10px;
 }
 
 #rightSidebar {
@@ -138,6 +139,34 @@ strong {
 	margin-top: 10px;
 }
 
+.card {
+	background-color: var(--theme-light-bg);
+	border: 1px solid var(--theme-border-blue);
+	padding: 10px;
+	width: 32%;
+	height: 320px;
+	text-align: center;
+	vertical-align: top;
+	display: inline-block;
+}
+
+.card img {
+	width: 75%;
+	border: 1px solid var(--theme-border-blue)
+}
+
+.card + .card {
+	margin-left: 10px;
+}
+
+#wga img {
+	display: block;
+	width: 80%;
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 #topBar {
 	width: 100%;
 	height: 30px;
@@ -167,6 +196,10 @@ and then subtrack it by 100. use this new number as the
 		flex-wrap: wrap;
 	}
 
+	#header {
+		height: 70px;
+	}
+
 	aside {
 		width: 100%;
 	}
@@ -181,13 +214,18 @@ and then subtrack it by 100. use this new number as the
 
 	#leftSidebar {
 		order: 2;
+		margin-top: 10px;
+		margin-right: 0;
 	}
 
-	#rightSidebar {
-		order: 3;
+	.card {
+		width: 100%;
+		overflow-wrap: break-word;
+		height: 400px;
 	}
 
-	#navbar ul {
-		flex-wrap: wrap;
+	.card + .card {
+		margin-left: 0;
+		margin-top: 10px;
 	}
 }
