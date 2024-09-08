@@ -162,6 +162,26 @@ strong {
 	margin-top: 10px;
 }
 
+.tooltip {
+    display: inline;
+    border-bottom: 2px solid var(--theme-border-blue)
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 240px;
+    background-color: var(--theme-medium-bg);
+    color: var(--theme-text-unfocus);
+    padding: 10px;
+    border: 1px solid var(--theme-border-purple);
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
 .card {
 	background-color: var(--theme-light-bg);
 	border: 1px solid var(--theme-border-blue);
@@ -251,4 +271,18 @@ and then subtrack it by 100. use this new number as the
 		margin-left: 0;
 		margin-top: 10px;
 	}
+
+    .tooltip {
+        border: none !important;
+    }
+
+    .tooltip .tooltiptext {
+        visibility: visible;
+        display: inline;
+        width: auto;
+        position: relative;
+        border: none !important;
+        background-color: inherit;
+        padding: inherit;
+    }
 }
