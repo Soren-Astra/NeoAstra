@@ -226,6 +226,26 @@ strong {
 	list-style-image: var(--blue-point);
 }
 
+.soren {
+	position: fixed; 
+	bottom: 0; 
+	right: 20px; 
+	width: 400px;
+}
+
+.sorenscreen {
+	position: fixed; 
+	bottom: 220px;
+	right: 192px; 
+	width: 100px; 
+	border-radius: 50%
+}
+
+main li {
+	list-style-image: url('resources/dot.png');
+	margin: 10px 0;
+}
+
 /* BELOW THIS POINT IS MEDIA QUERY */
 
 /* so you wanna change the width of your page? 
