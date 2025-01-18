@@ -1,0 +1,65 @@
+@import url("style.css");
+
+html,
+body {
+	margin: 0;
+	height: 100%;
+	display: flex;
+	flex-flow: column;
+}
+
+aside {
+	background-color: var(--theme-medium-bg);
+	width: 220px;
+	padding: 5px 10px;
+	font-size: smaller;
+	flex: 1 1 auto;
+	border: 1px solid var(--theme-border-purple);
+}
+
+aside hr {
+	color: var(--theme-border-blue);
+	margin: 20px 0;
+}
+
+a {
+    color: var(--theme-text-focus);
+}
+
+.lilbox {
+	border: 1px solid var(--theme-border-purple);
+	border-radius: 10px;
+	padding: 10px;
+	margin: 5px;
+}
+
+.lilbox h2 {
+	margin: 0;
+}
+
+.lilbox span {
+	display: inline-block;
+	margin: 10px 0;
+}
+
+.currenttitle {
+	border: 1px dashed white;
+	border-radius: 10px;
+	padding: 5px;
+	background-color: #99888855;
+}
+
+#sidebarList li {
+	list-style-image: var(--purple-point);
+	margin: 10px 0;
+}
+
+#sidebarList .alternate {
+	list-style-image: var(--blue-point);
+}
+
+@media only screen and (max-width: 800px) {
+	aside {
+		width: 100%;
+	}
+}

@@ -34,8 +34,6 @@ body {
 
 #container {
 	max-width: 900px;
-	/* if you change the above value, scroll to the bottom
-	and change the media query according to the comment! */
 	margin: 0 auto;
 }
 
@@ -53,47 +51,9 @@ body {
 	margin-bottom: 10px;
 }
 
-
 #flex {
 	display: flex;
 }
-
-aside {
-	background-color: var(--theme-medium-bg);
-	width: 220px;
-	padding: 5px 10px;
-	font-size: smaller;
-	border: 1px solid var(--theme-border-purple);
-}
-
-.lilbox {
-	border: 1px solid var(--theme-border-purple);
-	border-radius: 10px;
-	padding: 10px;
-	margin: 5px;
-}
-
-.lilbox h2 {
-	margin: 0;
-}
-
-.lilbox span {
-	display: inline-block;
-	margin: 10px 0;
-}
-
-.currenttitle {
-	border: 1px dashed white;
-	border-radius: 10px;
-	padding: 5px;
-	background-color: #99888855;
-}
-
-aside hr {
-	color: var(--theme-border-blue);
-	margin: 20px 0;
-}
-
 
 main {
 	flex: 1;
@@ -105,13 +65,12 @@ main hr {
 	margin: 20px 0;
 }
 
-#leftSidebar {
+#leftsidebar {
 	order: 1;
 	margin-right: 10px;
-}
-
-#rightSidebar {
-	order: 3;
+	border: none;
+	width: 220px;
+	min-height: 800px;
 }
 
 footer {
@@ -158,28 +117,28 @@ strong {
 	color: var(--theme-text-unfocus);
 }
 
-.post + .post {
+.post+.post {
 	margin-top: 10px;
 }
 
 .tooltip {
-    display: inline;
-    border-bottom: 2px solid var(--theme-border-blue)
+	display: inline;
+	border-bottom: 2px solid var(--theme-border-blue)
 }
 
 .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 240px;
-    background-color: var(--theme-medium-bg);
-    color: var(--theme-text-unfocus);
-    padding: 10px;
-    border: 1px solid var(--theme-border-purple);
-    position: absolute;
-    z-index: 1;
+	visibility: hidden;
+	width: 240px;
+	background-color: var(--theme-medium-bg);
+	color: var(--theme-text-unfocus);
+	padding: 10px;
+	border: 1px solid var(--theme-border-purple);
+	position: absolute;
+	z-index: 1;
 }
 
 .tooltip:hover .tooltiptext {
-    visibility: visible;
+	visibility: visible;
 }
 
 .card {
@@ -187,7 +146,7 @@ strong {
 	border: 1px solid var(--theme-border-blue);
 	padding: 10px;
 	width: 32%;
-	height: 320px;
+	height: 360px;
 	text-align: center;
 	vertical-align: top;
 	display: inline-block;
@@ -198,8 +157,12 @@ strong {
 	border: 1px solid var(--theme-border-blue)
 }
 
-.card + .card {
-	margin-left: 10px;
+.card+.card {
+	/* margin-left: 10px; */
+}
+
+.cardline+.cardline {
+	margin-top: 10px;
 }
 
 #wga img {
@@ -217,28 +180,24 @@ strong {
 	font-size: smaller;
 }
 
-#sidebarList li {
-	list-style-image: var(--purple-point);
-	margin: 10px 0;
-}
-
-#sidebarList .alternate {
-	list-style-image: var(--blue-point);
-}
-
 .soren {
-	position: fixed; 
-	bottom: 0; 
-	right: 20px; 
+	position: fixed;
+	bottom: 0;
+	right: 20px;
 	width: 400px;
 }
 
 .sorenscreen {
-	position: fixed; 
+	position: fixed;
 	bottom: 220px;
-	right: 192px; 
-	width: 100px; 
+	right: 192px;
+	width: 100px;
 	border-radius: 50%
+}
+
+#lastupdates {
+	height: 400px;
+	overflow: scroll;
 }
 
 main li {
@@ -263,8 +222,12 @@ and then subtrack it by 100. use this new number as the
 		height: 70px;
 	}
 
-	aside {
+	#leftsidebar {
+		order: 2;
+		margin-top: 10px;
+		margin-right: 0;
 		width: 100%;
+		height: 300px;
 	}
 
 	/* the order of the items is adjusted here for responsiveness!
@@ -275,34 +238,41 @@ and then subtrack it by 100. use this new number as the
 		order: 1;
 	}
 
-	#leftSidebar {
-		order: 2;
-		margin-top: 10px;
-		margin-right: 0;
-	}
-
 	.card {
 		width: 100%;
 		overflow-wrap: break-word;
 		height: 400px;
 	}
 
-	.card + .card {
+	.card+.card {
 		margin-left: 0;
 		margin-top: 10px;
 	}
 
-    .tooltip {
-        border: none !important;
-    }
+	.tooltip {
+		border: none !important;
+	}
 
-    .tooltip .tooltiptext {
-        visibility: visible;
-        display: inline;
-        width: auto;
-        position: relative;
-        border: none !important;
-        background-color: inherit;
-        padding: inherit;
-    }
+	.tooltip .tooltiptext {
+		visibility: visible;
+		display: inline;
+		width: auto;
+		position: relative;
+		border: none !important;
+		background-color: inherit;
+		padding: inherit;
+	}
+
+	.soren {
+		visibility: hidden;
+	}
+
+	.sorenscreen {
+		visibility: hidden;
+	}
+
+	#lastupdates {
+		height: auto;
+		overflow: hidden;
+	}
 }

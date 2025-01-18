@@ -1,107 +1,97 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>✨Soren's Space✨</title>
-		<link href="/style.css" rel="stylesheet" type="text/css" media="all">
-		<script src="/currently.js"></script>
-	</head>
-	<body>
-		<div id="container">
-			<div id="headerArea">
-				<div id="header"></div>
-			</div>
 
-			<div id="flex">
-				<aside id="leftSidebar">
-					<h2>Navigation</h2>
-					<ul id="sidebarList">
-						<li>Home</li>
-                        <li class="alternate"><a href="/about.html">About<img src="/resources/new.gif"/></a></li>
-                        <li><a href="/blog.html">Blog</a></li>
-						<li class="alternate"><a href="/gallery.html">Gallery</a></li>
-						<li><a href="/projects.html">Projects</a></li>
-						<li class="alternate"><a href="/resources.html">Resources</a></li>
-					</ul>
-					<hr>
-					<div>
-						<a href="https://www.mozilla.org/en-US/firefox/new/"><img src="resources/banners/firefoxget.gif" alt="Get Firefox"></a><!--
-						--><a href="https://neocities.org/site/sorenastra"><img src="resources/banners/neocities-pink.gif" alt="Neocities"></a>
-						<img src="resources/banners/proweb_teal.gif" alt="Professional web design"><!--
-						--><img src="resources/banners/tyg.gif" alt="Trans Your Gender">
-						<img src="resources/banners/web3no.gif" alt="Say no to web3"><!--
-						--><a href="https://mastodon.art/@SorenAstra"><img src="resources/banners/mastodon_button_2.gif" alt="Mastodon"></a>
-						<img src="resources/banners/xp.gif" alt="Windows XP"/><img src="resources/banners/noai.png" alt="Don't feed the AI!"/>
-					</div>
-					<hr>
-					<div class="lilbox">
-						<h2>Currently...</h2>
-						<span class="currenttitle">Playing: </span>
-						<div id="currentplay"></div>
-						<span class="currenttitle">Listening to: </span>
-						<div id="currentlisten"></div>
-						<span class="currenttitle">Working on: </span>
-						<div id="currentwork"></div>
-					</div>
-				</aside>
-				<main>
-					<div class="post">
-						<h1>Welcome!</h1>
-						<p>Hello! My name is Soren.</p>
-						<p>I made this site to keep track of my thoughts and projects.</p>
-						<p>There will be a blog, a gallery of the art I make, a list of my projects, and links to various neat things I find.</p>
-						<p>Some of my interests are retro games, obscure indie games, webcomics, fantasy, weird things. I'm mainly a developer, but I also try to make art, and I want to write stories (and maybe music?)</p>
-						<br/>
-						<p>Anyway, have fun!</p>
-						<hr/>
-						<p style="text-align:center;">
-						  <a href="https://mastodon.art/@SorenAstra"><image src="resources/icon_mastodon.png" alt="Mastodon" width="50"/></a>
-						  <a href="https://caramel-macchiatowl.tumblr.com/"><image src="resources/icon_tumblr.png" alt="Tumblr" width="50"/></a>
-						  <a href="https://github.com/Soren-Astra/NeoAstra"><image src="resources/icon_github.png" alt="GitHub" width="50"/></a>
-						</p>
-					</div>
-					<hr>
-					<div class="post">
-						<h1>Last updates</h1>
-						<h2>21/09/2024</h2>
-						<p>Remember to clear your cache if something looks broken!</p>
-                        <ul>
-                            <li>Added Soren the bot, sitting gently on the side</li>
-							<li>Finally added an <span class="tooltip">about me page<span class="tooltiptext">(now there's an easier way to find my pronouns than reading a whole weird blog post!)</span></span>.</li>
-                        </ul>
-						<h2>08/09/2024</h2>
-                        <ul>
-                            <li>New post on the blog page, about some thoughts I had.</li>
-                            <li>I've been having fun with <span class="tooltip">tooltips!<span class="tooltiptext">(they should even display properly on mobile!)</span></span></li>
-                            <li>I finally fully fixed the page name, no more random quote at the end lol</li>
-                        </ul>
-                        <h2>04/09/2024</h2>
-						<ul>
-							<li>Added two buttons</li>
-							<li>Added a currently doing box</li>
-						</ul>
-						<h2>29/07/2024</h2>
-						<p>Oh wow, an update!</p>
-						<ul>
-							<li>Made the projects page</li>
-							<li>Added a page on the WitchGameAdvance project</li>
-							<li>Finally fixed the mobile verion of the site</li>
-							<li>Added a small blog post</li>
-						</ul>
-						<h2>31/12/2023</h2>
-						<p>We're online!</p>
-						<p>Some pages are still missing, but the site now exists!</p>
-					</div>
-                	<img src="/resources/pipes.gif" alt="The Windows XP pipes screensaver" class="sorenscreen"/>
-                    <img src="/resources/soren_sit.png" alt="SorenOS sitting on your browser" class="soren"/>
-				</main>
-			</div>
-			<footer id="footer" style="margin-top: 10px;">
-				<p>Layout template from <a href="https://sadgrl.online/projects/layout-builder/" target="_blank">sadgrl.online</a></p>
-				<p>Font from <a href="https://www.dafont.com/fr/mrmanet.d5509" target="_blank">Riciery Leal</a></p>
-			</footer>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>✨Soren's Space✨</title>
+	<link href="/style.css" rel="stylesheet" type="text/css" media="all">
+</head>
+
+<body>
+	<div id="container">
+		<div id="headerArea">
+			<div id="header"></div>
 		</div>
-		<style class="darkreader darkreader--sync" media="screen"></style>
-	</body>
+
+		<div id="flex">
+			<iframe id="leftsidebar" src="sidebar.html" title="sidebar"></iframe>
+			<main>
+				<div class="post">
+					<h1>Welcome!</h1>
+					<p>Hello! My name is Soren.</p>
+					<p>I made this site to keep track of my thoughts and projects.</p>
+					<p>There will be a blog, a gallery of the art I make, a list of my projects, and links to various
+						neat things I find.</p>
+					<p>Some of my interests are retro games, obscure indie games, webcomics, fantasy, weird things. I'm
+						mainly a developer, but I also try to make art, and I want to write stories (and maybe music?)
+					</p>
+					<br />
+					<p>Anyway, have fun!</p>
+					<hr />
+					<p style="text-align:center;">
+						<a href="https://mastodon.art/@SorenAstra">
+							<image src="resources/icon_mastodon.png" alt="Mastodon" width="50" /></a>
+						<a href="https://caramel-macchiatowl.tumblr.com/">
+							<image src="resources/icon_tumblr.png" alt="Tumblr" width="50" /></a>
+						<a href="https://github.com/Soren-Astra/NeoAstra">
+							<image src="resources/icon_github.png" alt="GitHub" width="50" /></a>
+					</p>
+				</div>
+				<hr>
+				<div class="post" id="lastupdates">
+					<h1>Last updates</h1>
+					<p>Remember to clear your cache if something looks broken!</p>
+					<h2>18/10/2025</h2>
+					<ul>
+						<li>Refactored a few things (the sidebar is in an iframe now!)</li>
+						<li><span class="tooltip">Unbroke<span class="tooltiptext">(Sorry about the bunny sitting in front of the text incident)</span></span> the mobile version (I hope)</li>
+						<li>Updated the projects</li>
+						<li><b>DIDN'T</b> update the scrollbars because Firefox won't let me >:(</li>
+						<li>Thought really hard about doing the gallery for 10 seconds, then decided it would be too much effort for today</li>
+					</ul>
+					<h2>21/09/2024</h2>
+					<ul>
+						<li>Added Soren the bot, sitting gently on the side</li>
+						<li>Finally added an <span class="tooltip">about me page<span class="tooltiptext">(now there's
+									an easier way to find my pronouns than reading a whole weird blog
+									post!)</span></span>.</li>
+					</ul>
+					<h2>08/09/2024</h2>
+					<ul>
+						<li>New post on the blog page, about some thoughts I had.</li>
+						<li>I've been having fun with <span class="tooltip">tooltips!<span class="tooltiptext">(they
+									should even display properly on mobile!)</span></span></li>
+						<li>I finally fully fixed the page name, no more random quote at the end lol</li>
+					</ul>
+					<h2>04/09/2024</h2>
+					<ul>
+						<li>Added two buttons</li>
+						<li>Added a currently doing box</li>
+					</ul>
+					<h2>29/07/2024</h2>
+					<p>Oh wow, an update!</p>
+					<ul>
+						<li>Made the projects page</li>
+						<li>Added a page on the WitchGameAdvance project</li>
+						<li>Finally fixed the mobile verion of the site</li>
+						<li>Added a small blog post</li>
+					</ul>
+					<h2>31/12/2023</h2>
+					<p>We're online!</p>
+					<p>Some pages are still missing, but the site now exists!</p>
+				</div>
+				<img src="/resources/pipes.gif" alt="The Windows XP pipes screensaver" class="sorenscreen" />
+				<img src="/resources/soren_sit.png" alt="SorenOS sitting on your browser" class="soren" />
+			</main>
+		</div>
+		<footer id="footer" style="margin-top: 10px;">
+			<p>Layout template from <a href="https://sadgrl.online/projects/layout-builder/"
+					target="_blank">sadgrl.online</a></p>
+			<p>Font from <a href="https://www.dafont.com/fr/mrmanet.d5509" target="_blank">Riciery Leal</a></p>
+		</footer>
+	</div>
+	<style class="darkreader darkreader--sync" media="screen"></style>
+</body>
+
 </html>

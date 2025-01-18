@@ -1,91 +1,84 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>✨Projects - Soren's Space✨</title>
-		<link href="/style.css" rel="stylesheet" type="text/css" media="all">
-		<script src="/currently.js"></script>
-	</head>
-	<body>
-		<div id="container">
-			<div id="headerArea">
-				<div id="header"></div>
-				<!--<nav id="navbar" style="margin-bottom: 10px;">
-				<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Blog</a></li>
-				<li><a href="#">Gallery</a></li>
-				<li><a href="#">Cool things</a></li>
-				</ul>
-				</nav>-->
-			</div>
 
-			<div id="flex">
-				<aside id="leftSidebar">
-					<h2>Navigation</h2>
-					<ul id="sidebarList">
-						<li><a href="/index.html">Home</a></li>
-                        <li class="alternate"><a href="/about.html">About<img src="/resources/new.gif"/></a></li>
-                        <li><a href="/blog.html">Blog</a></li>
-						<li class="alternate"><a href="/gallery.html">Gallery</a></li>
-						<li>Projects</li>
-						<li class="alternate"><a href="/resources.html">Resources</a></li>
-					</ul>
-					<hr>
-					<div>
-						<a href="https://www.mozilla.org/en-US/firefox/new/"><img src="resources/banners/firefoxget.gif" alt="Get Firefox"></a><!--
-						--><a href="https://neocities.org/site/sorenastra"><img src="resources/banners/neocities-pink.gif" alt="Neocities"></a>
-						<img src="resources/banners/proweb_teal.gif" alt="Professional web design"><!--
-						--><img src="resources/banners/tyg.gif" alt="Trans Your Gender">
-						<img src="resources/banners/web3no.gif" alt="Say no to web3"><!--
-						--><a href="https://mastodon.art/@SorenAstra"><img src="resources/banners/mastodon_button_2.gif" alt="Mastodon"></a>
-						<img src="resources/banners/xp.gif" alt="Windows XP"/><img src="resources/banners/noai.png" alt="Don't feed the AI!"/>
-					</div>
-					<hr>
-					<div class="lilbox">
-						<h2>Currently...</h2>
-						<span class="currenttitle">Playing: </span>
-						<div id="currentplay"></div>
-						<span class="currenttitle">Listening to: </span>
-						<div id="currentlisten"></div>
-						<span class="currenttitle">Working on: </span>
-						<div id="currentwork"></div>
-					</div>
-				</aside>
-				<main>
-					<div class="post">
-						<h1>Projects</h1>
-						<p>Here's a list of projects I've been working on, in no particular order.</p>
-					</div>
-					<hr>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>✨Projects - Soren's Space✨</title>
+	<link href="/style.css" rel="stylesheet" type="text/css" media="all">
+</head>
+
+<body>
+	<div id="container">
+		<div id="headerArea">
+			<div id="header"></div>
+		</div>
+
+		<div id="flex">
+			<iframe id="leftsidebar" src="sidebar.html" title="sidebar"></iframe>
+			<main>
+				<div class="post">
+					<h1>Projects</h1>
+					<p>Here's a list of projects I've been working on, in no particular order. You can click on the thumbnails for more details!</p>
+				</div>
+				<hr>
+				<div class="cardline">
 					<div class="card">
 						<h2>WitchGameAdvance</h2>
-						<a href="projects/wga.html"><img src="resources/wgathumb.png"/></a>
+						<p>[On hold]</p>
+						<a href="projects/wga.html"><img src="resources/wgathumb.png" /></a>
 						<p>A GBA game about a witch looking for her familiar.</p>
 						<p>█░░░░░░░░░ 10%</p>
-					</div><!--
-					--><div class="card">
+					</div>
+					<div class="card">
 						<h2>NeoAstra</h2>
-						<a href="/index.html"><img src="resources/neoastrathumb.png"/></a>
+						<p>[Ongoing]</p>
+						<a href="/index.html"><img src="resources/neoastrathumb.png" /></a>
 						<p>The neocities website you're on right now!</p>
-						<p>█████▒░░░░ 55%</p>
-					</div><!--
-					--><div class="card">
+						<p>██████▒░░░ 65%</p>
+					</div>
+					<div class="card">
+						<h2>ToDos</h2>
+						<p>[Ongoing]</p>
+						<a href="/projects/todos.html"><img src="resources/todothumb.png" /></a>
+						<p>A Godot game for tracking habits and todos.</p>
+						<p>▒░░░░░░░░░ 5%</p>
+					</div>
+				</div>
+				<div class="cardline">
+					<div class="card">
+						<h2>Soren3D</h2>
+						<p>[Ongoing]</p>
+						<a href="/projects/3dsoren.html"><img src="resources/soren3dthumb.png" /></a>
+						<p>He's in Blender now!</p>
+						<p>██████░░░░ 60%</p>
+					</div>
+					<div class="card">
 						<h2>Placeholder...</h2>
-						<img src="resources/wip.png"/>
-						<p>For the next project, a Godot game, perhaps?</p>
+						<p>[Placeholding]</p>
+						<img src="resources/wip.png" />
+						<p>For the next project...</p>
 						<p>░░░░░░░░░░ -%</p>
 					</div>
-                	<img src="/resources/pipes.gif" alt="The Windows XP pipes screensaver" class="sorenscreen"/>
-                    <img src="/resources/soren_sit.png" alt="SorenOS sitting on your browser" class="soren"/>
-				</main>
-			</div>
-			<footer id="footer" style="margin-top: 10px;">
-				<p>Layout template from <a href="https://sadgrl.online/projects/layout-builder/" target="_blank">sadgrl.online</a></p>
-				<p>Font from <a href="https://www.dafont.com/fr/mrmanet.d5509" target="_blank">Riciery Leal</a></p>
-			</footer>
+					<div class="card">
+						<h2>Placeholder...</h2>
+						<p>[Placeholding]</p>
+						<img src="resources/wip.png" />
+						<p>This one's job is to fill the line!</p>
+						<p>██████████ 100%</p>
+					</div>
+				</div>
+				<img src="/resources/pipes.gif" alt="The Windows XP pipes screensaver" class="sorenscreen" />
+				<img src="/resources/soren_sit.png" alt="SorenOS sitting on your browser" class="soren" />
+			</main>
 		</div>
-		<style class="darkreader darkreader--sync" media="screen"></style>
-	</body>
+		<footer id="footer" style="margin-top: 10px;">
+			<p>Layout template from <a href="https://sadgrl.online/projects/layout-builder/"
+					target="_blank">sadgrl.online</a></p>
+			<p>Font from <a href="https://www.dafont.com/fr/mrmanet.d5509" target="_blank">Riciery Leal</a></p>
+		</footer>
+	</div>
+	<style class="darkreader darkreader--sync" media="screen"></style>
+</body>
+
 </html>
